@@ -1,0 +1,7 @@
+{
+    "short_name": "Catch",
+    "name": "Catch",
+    "start_url": "/index.html",
+    "display": "fullscreen",
+    "orientation": "landscape"
+}

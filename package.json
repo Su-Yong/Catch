@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Su-Yong/Catch#readme",
   "dependencies": {
+    "caller-id": "^0.1.0",
+    "express": "^4.16.3",
     "socket.io": "^2.1.1"
   }
 }
