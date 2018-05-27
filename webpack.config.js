@@ -16,6 +16,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['client/js'])
+    //new CleanWebpackPlugin(['client/js'])
   ]
 }
