@@ -1,13 +1,13 @@
 const Screen = require('../Screen.js')
 const ScreenType = require('../ScreenType.js')
+const InputBinder = require('../InputBinder.js')
 
-class MainScreen extends Screen {
+const html = ''
+
+class GameScreen extends Screen {
   constructor () {
-    super('main', ScreenType.BASE)
-  }
-
-  init () {
-    this.inputBinder.setKeyDownListener(event => {
+    const inputBinder = new InputBinder()
+    inputBinder.setKeyDownListener(event => {
       switch (String.fromCharCode(event.keyCode)) {
         case 'w': case 'W':
           
@@ -23,7 +23,9 @@ class MainScreen extends Screen {
           break
       }
     })
+
+    super('game', ScreenType.BASE, inputBinder)
   }
 }
 
-module.exports = MainScreen
+module.exports = GameScreen

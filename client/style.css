@@ -1,0 +1,21 @@
+body {
+  margin: 0px;
+  padding: 0px;
+
+  position: relative;
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+}
+
+#screen-provider {
+  width: 100vw;
+  height: 100vh;
+  
+  position: absolute;
+
+  top: 0px;
+  left: 0px;
+}

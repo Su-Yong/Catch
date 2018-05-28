@@ -2,15 +2,12 @@ const ScreenType = require('./ScreenType.js')
 const InputBinder = require('./InputBinder.js')
 
 class Screen {
-  constructor (name, type = ScreenType.STACK) {
+  constructor (name, type = ScreenType.STACK, html = '', inputBinder = new InputBinder()) {
     this.name = name
     this.type = type
 
-    this.inputBinder = new InputBinder()
-  }
-
-  init () {
-    
+    this.html = html
+    this.inputBinder = inputBinder
   }
 }
 
