@@ -1,8 +1,15 @@
+@import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
+
 body {
   margin: 0px;
   padding: 0px;
 
   position: relative;
+  
+  background: #F5F5F5;
+
+  font-family: 'NanumSquare';
+  font-weight: 700;
 }
 
 canvas {
@@ -18,4 +25,57 @@ canvas {
 
   top: 0px;
   left: 0px;
+}
+
+.input-provider {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 12px #bdbdbd;
+  text-align: left;
+  padding: 12px;
+}
+
+.input-provider > input {
+  outline: transparent;
+  border:  transparent;
+
+  font-family: 'NanumSquare';
+  font-weight: 700;
+}
+
+.button {
+  width: fit-content;
+
+  float: left;
+
+  background: #3F51B5;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  color: #FAFAFA;
+
+  transition: all 0.25s ease;
+}
+
+.button:hover {
+  background: #303F9F;
+  transform: scale(1.1);
+  box-shadow: 0px 2px 6px #bdbdbd;
+}
+
+.flat-button {
+  width: fit-content;
+
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  color: #212121;
+  font-weight: 1000;
+
+  transition: all 0.25s ease;
+}
+
+.flat-button:hover {
+  transform: scale(0.9);
 }
