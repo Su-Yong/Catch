@@ -1,6 +1,7 @@
-const Client = require('./Client.js')
+const client = require('./Client.js')
 
-const client = new Client()
+global.Client = new client()
+
 window.onload = () => {
-  client.init()
+  Client.init()
 }

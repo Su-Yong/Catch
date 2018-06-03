@@ -22,7 +22,9 @@ class MainScreen extends Screen {
     register.addEventListener('click', () => {
       const name = input.value
 
-      
+      Client.screenManager.pushScreen('game', {
+        name: name
+      })
     })
   }
 }

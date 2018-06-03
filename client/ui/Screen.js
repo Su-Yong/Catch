@@ -8,6 +8,14 @@ class Screen {
 
     this.html = html
     this.inputBinder = inputBinder
+
+    this.data
+  }
+
+  init () {}
+
+  syncData (data) {
+    this.data = data
   }
 }
 

@@ -20,7 +20,7 @@ class ScreenManager {
     this.screens.push(screen)
   }
 
-  pushScreen (name) {
+  pushScreen (name, data) {
     for (const screen of this.screens) {
       if (screen.name === name) {
         if (screen.type === ScreenType.BASE) {
@@ -30,6 +30,8 @@ class ScreenManager {
         }
 
         this._element.innerHTML = screen.html
+        screen.syncData(data)
+        screen.init()
       }
     }
   }
