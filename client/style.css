@@ -54,6 +54,8 @@ canvas {
   border-radius: 2px;
   color: #FAFAFA;
 
+  cursor: pointer;
+  
   transition: all 0.25s ease;
 }
 
@@ -72,10 +74,12 @@ canvas {
   border-radius: 2px;
   color: #212121;
   font-weight: 1000;
+  
+  cursor: pointer;
 
   transition: all 0.25s ease;
 }
 
 .flat-button:hover {
-  transform: scale(0.9);
+  background: #F5F5F5;
 }
