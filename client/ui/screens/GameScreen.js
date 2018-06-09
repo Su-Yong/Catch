@@ -2,6 +2,8 @@ const Screen = require('../Screen.js')
 const ScreenType = require('../ScreenType.js')
 const InputBinder = require('../InputBinder.js')
 
+const RenderManager = require('../../object/RenderManager.js')
+
 const html = ''
 
 class GameScreen extends Screen {
@@ -25,6 +27,23 @@ class GameScreen extends Screen {
     })
 
     super('game', ScreenType.BASE, inputBinder)
+
+    this.renderManager = new RenderManager()
+  }
+
+  init () {
+    this.renderManager.init(document.getElementById('canvas'))
+  }
+  
+  start () {
+    this.run = () => {
+      // this.renderManager.update()
+      this.renderManager.render()
+
+      requestAnimationFrame(this.run)
+    }
+
+    requestAnimationFrame(this.run)
   }
 }
 

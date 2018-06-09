@@ -1,5 +1,6 @@
 const Protocol = {
-  LOGIN: 'login'
+  LOGIN: 'login',
+  JOIN: 'join'
 }
 
 module.exports = Protocol
