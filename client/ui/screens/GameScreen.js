@@ -4,6 +4,7 @@ const InputBinder = require('../InputBinder.js')
 
 const RenderManager = require('../../game/RenderManager.js')
 const Game = require('../../game/Game.js')
+const Game = require('../../game/player/Player.js')
 
 const html = ''
 
@@ -39,11 +40,19 @@ class GameScreen extends Screen {
   
   prepare () {
     this.game.generateMaze()
+
+    const player = new Player()
+    player.x = Math.floor(Math.random() * this.game.width)
+    player.y = Math.floor(Math.random() * this.game.height)
   }
 
   start () {
     this.run = () => {
-      // this.renderManager.update()
+      this.renderManager.update({
+        map: this.game.maze,
+        bombs: this.game.bombs,
+        players: this.game.players
+      })
       this.renderManager.render()
 
       requestAnimationFrame(this.run)

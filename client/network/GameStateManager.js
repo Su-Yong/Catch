@@ -9,9 +9,13 @@ class GameStateManager {
     })
   }
 
-  register (name) {
-    this.socket.emit(Protocol.LOGIN, {
-      name: name
+  addPlayer (player) {
+    this.socket.emit(Protocol.ADD_PLAYER, {
+      name: player.name,
+      health: player.health,
+      x: player.x,
+      y: player.y,
+      property: player.property
     })
   }
 }

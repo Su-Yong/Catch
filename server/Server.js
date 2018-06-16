@@ -27,6 +27,8 @@ const buildClient = () => {
 class Server {
   constructor () {
     this.networkManager = new NetworkManager(socketServer)
+
+    this.games = []
   }
 
   async start () {
@@ -37,6 +39,10 @@ class Server {
     http.listen(3000, () => {
       Logger.info('Server opened at 3000')
     })
+  }
+
+  addGame (game) {
+    this.games.push(game)
   }
 
   static get version () {

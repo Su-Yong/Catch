@@ -3,7 +3,7 @@ class RenderManager {
     this.canvas
     this.ctx
 
-    this.data
+    this.game
   }
 
   init (canvas) {
@@ -11,11 +11,14 @@ class RenderManager {
     this.ctx = this.canvas.getContext('2d')
   }
 
-  update (map) {
-    this.data = map
+  update (game) {
+    this.game = game
   }
 
-  render () {
+  render (x, y, width, height) {
+    const wu = width / 2
+    const hu = height / 2
+
 
   }
 }

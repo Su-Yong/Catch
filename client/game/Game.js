@@ -83,6 +83,11 @@ class Game {
 
     console.log(this.maze)
   }
+
+  addPlayer (player) {
+    this.players.push(player)
+    Client.networkManager.gameStateManager.addPlayer(player)
+  }
 }
 
 module.exports = Game
