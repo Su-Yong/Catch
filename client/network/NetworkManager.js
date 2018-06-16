@@ -1,5 +1,7 @@
 const LoginManager = require('./LoginManager.js')
 const PlayerJoinManager = require('./PlayerJoinManager.js')
+const GameStateManager = require('./GameStateManager.js')
+
 
 class NetworkManager {
   constructor (socketServer) {
@@ -7,14 +9,7 @@ class NetworkManager {
 
     this.loginManager = new LoginManager(this.socketServer)
     this.playerJoinManager = new PlayerJoinManager(this.socketServer)
-  }
-
-  getLoginManager () {
-    return this.loginManager
-  }
-
-  getPlayerJoinManager () {
-    return this.playerJoinManager
+    this.gameStateManager = new GameStateManager(this.socketServer)
   }
 }
 

@@ -25,6 +25,7 @@ class MainScreen extends Screen {
       Client.screenManager.pushScreen('game', {
         name: name
       })
+      Client.screenManager.getNowScreen().prepare()
     })
   }
 }

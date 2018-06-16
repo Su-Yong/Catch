@@ -4,7 +4,7 @@ const ScreenManager = require('./ui/ScreenManager.js')
 const GameScreen = require('./ui/screens/GameScreen.js')
 const MainScreen = require('./ui/screens/MainScreen.js')
 
-const RenderManager = require('./object/RenderManager.js')
+const RenderManager = require('./game/RenderManager.js')
 
 class Client {
   constructor () {

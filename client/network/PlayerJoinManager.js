@@ -6,9 +6,7 @@ class PlayerJoinManager {
   }
 
   join (player) {
-    this.socket.emit(Protocol.JOIN, {
-      name: name
-    })
+    this.socket.emit(Protocol.JOIN, player)
   }
 }
 

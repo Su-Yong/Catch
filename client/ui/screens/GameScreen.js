@@ -2,7 +2,8 @@ const Screen = require('../Screen.js')
 const ScreenType = require('../ScreenType.js')
 const InputBinder = require('../InputBinder.js')
 
-const RenderManager = require('../../object/RenderManager.js')
+const RenderManager = require('../../game/RenderManager.js')
+const Game = require('../../game/Game.js')
 
 const html = ''
 
@@ -29,12 +30,17 @@ class GameScreen extends Screen {
     super('game', ScreenType.BASE, inputBinder)
 
     this.renderManager = new RenderManager()
+    this.game = new Game()
   }
 
   init () {
     this.renderManager.init(document.getElementById('canvas'))
   }
   
+  prepare () {
+    this.game.generateMaze()
+  }
+
   start () {
     this.run = () => {
       // this.renderManager.update()

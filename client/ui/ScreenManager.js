@@ -47,6 +47,10 @@ class ScreenManager {
       }
     }
   }
+
+  getNowScreen () {
+    return this.screenStack[this.screenStack.length - 1]
+  }
 }
 
 module.exports = ScreenManager
