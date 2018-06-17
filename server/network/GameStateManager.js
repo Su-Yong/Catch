@@ -11,6 +11,12 @@ class GameStateManager {
       
     })
   }
+
+  update (game) {
+    socket.emit(Protocol.MAP_SYNC, {
+      game: game
+    })
+  }
 }
 
 module.exports = GameStateManager

@@ -7,6 +7,10 @@ class Game {
     this.maze = []
     this.bombs = []
   }
+
+  getUserCount () {
+    return this.players.length
+  }
 }
 
 module.exports = Game

@@ -1,3 +1,3 @@
-const Server = require('./server/Server.js')
-const server = new Server()
-server.start()
+const server = require('./server/Server.js')
+global.Server = new server()
+global.Server.start()
